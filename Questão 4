@@ -1,0 +1,22 @@
+Questão 4
+
+SELECT 
+maintable_XJ43I.ID,
+maintable_XJ43I.Name,
+DivisionName,
+m.Name as ManagerName,
+maintable_XJ43I.Salary FROM maintable_XJ43I
+
+INNER JOIN
+
+cb_companydivisions as i on i.ID = maintable_XJ43I.DivisionID
+
+INNER JOIN
+
+maintable_XJ43I as a on a.ID = maintable_XJ43I.ManagerID
+
+ORDER BY Salary
+
+DESC LIMIT 1
+
+OFFSET 1
