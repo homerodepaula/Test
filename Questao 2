@@ -1,0 +1,20 @@
+Questão 2:
+
+def StockPicker(arr):
+    max = -1
+    total = 0
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            try:
+                total = arr[j] - arr[i]
+               # print(total, "=", arr[j], "-", arr[i])
+            except IndexError:
+                continue
+            if (total > max):
+                max = total
+    if (max > 0):
+        return max
+    else:
+        return -1
+ 
+print(StockPicker([44, 30, 24, 32, 35, 30, 40, 38, 15]))
