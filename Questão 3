@@ -1,0 +1,13 @@
+Questão 3:
+
+SELECT 
+id, 
+FirstName, 
+LastName,
+ReportsTo, 
+Position, 
+Age, 
+IF (ReportsTo = 'Jenny Richards', "CEO", "None") AS 'Boss Title' 
+FROM func WHERE ReportsTo = "Jenny Richards" 
+OR ReportsTo is NULL 
+ORDER BY Age;
