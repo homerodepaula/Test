@@ -1,0 +1,15 @@
+Questão 1:
+
+def NumberStream(num):
+   for i in range(len(num)):
+        contador = 1
+        for j in range(i+1, len(num)):
+            if num[i] == num[j]:
+                contador += 1
+               if contador == int(num[i]):
+                    return True
+            else:
+                break
+    return False
+
+print(NumberStream("6539923354"))
